@@ -13,8 +13,6 @@ It can generate prompts, get model responses, and compute results per item and a
  
 #### Methods
 
-- `main()`: Downloads Ekaia, Gogoa, Tantak  
-
 - `evaluate()`: Evaluates metrics and saves results per item in JSON.
 
 - `generate_prompts(metric)`: Creates prompts based on the metric and data.
