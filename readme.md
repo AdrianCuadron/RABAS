@@ -49,7 +49,7 @@ Creates judge outputs from a dataset.
 Calculates metric scores from the judge's responses.  
   **Usage:** 
   ```bash
-  python3 -u get_scores.py <judge_responses_path_dataset>
+  python3 get_scores.py <judge_responses_path_dataset>
   ```
 > Output: Average metrics file (`*_metrics_results.txt`).
 
