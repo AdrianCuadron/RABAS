@@ -1,0 +1,26 @@
+{
+  "ragas_version": "0.3.6",
+  "original_hash": 337946282560805691,
+  "language": "euskara",
+  "instruction": "Generate a question for the given answer and Identify if answer is noncommittal. Give noncommittal as 1 if the answer is noncommittal and 0 if the answer is committal. A noncommittal answer is one that is evasive, vague, or ambiguous. For example, \"I don't know\" or \"I'm not sure\" are noncommittal answers",
+  "examples": [
+    {
+      "input": {
+        "response": "Albert Einstein Alemanian jaio zen."
+      },
+      "output": {
+        "question": "Non jaio zen Albert Einstein?",
+        "noncommittal": 0
+      }
+    },
+    {
+      "input": {
+        "response": "Ez dakit 2023an asmatutako telefono adimendunaren ezaugarri iraultzaileari buruz, 2022tik aurrerako informaziorik ez dudalako."
+      },
+      "output": {
+        "question": "Zein izan zen 2023an asmatutako telefono adimendunaren ezaugarri iraultzailea?",
+        "noncommittal": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "ragas_version": "0.3.6",
+  "original_hash": 661526926388935871,
+  "language": "euskara",
+  "instruction": "Given question, answer and context verify if the context was useful in arriving at the given answer. Give verdict as \"1\" if useful and \"0\" if not with json output. Output format: {\"reason\": <explanation>, \"verdict\": <1 or 0>}. Response only this json.",
+  "examples": [
+    {
+      "input": {
+        "question": "Zer esan diezadakezu Albert Einstein-i buruz?",
+        "context": "Albert Einstein (1879ko martxoaren 14a - 1955eko apirilaren 18a) fisikari teoriko alemaniarra izan zen, garai guztietako zientzialari garrantzitsuen eta eraginkorrenetako bat bezala jotzen dena. Bereziki erlatibitatearen teoria garatzeagatik ezaguna, ekarpen garrantzitsuak egin zituen mekanika kuantikoan ere, eta horregatik izan zen XX. mendearen lehen hamarkadetan fisika modernoak naturaren ulermenean egin zuen iraultzaren erdigunean. Erlatibitatearen teoriatik eratorritako masa-energia baliokidetasunaren bere formula, E = mc2, \"munduko ekuazio ospetsuena\" bezala izendatu da. 1921ean Fisikako Nobel Saria jaso zuen \"fisika teorikoari egindako zerbitzuengatik, eta bereziki fotoefektuaren legearen aurkikuntzagatik\", teoria kuantikoaren garapenean funtsezko urrats bat izan zena. Bere lana zientziaren filosofiaren gainean izan duen eraginagatik ere ezaguna da. 1999an britainiar *Physics World* aldizkariak mundu osoko 130 fisikari nabarmenekin egindako inkesta batean, Einstein garai guztietako fisikari onenatzat jo zen. Bere lorpen intelektualek eta jatorrizkotasunak Einstein jenioaren sinonimo bihurtu dute.",
+        "answer": "Albert Einstein, 1879ko martxoaren 14an jaioa, fisikari teoriko alemaniarra izan zen, garai guztietako zientzialari handien eta eraginkorrenetako bat bezala ezaguna. 1921ean Fisikako Nobel Saria jaso zuen fisika teorikoari egindako zerbitzuengatik."
+      },
+      "output": {
+        "reason": "Emandako testuingurua oso erabilgarria izan da erantzun hori emateko. Testuinguruak Albert Einsteinen bizitzari eta ekarpenei buruzko informazio garrantzitsua jasotzen du, eta hori guztia erantzunean islatzen da.",
+        "verdict": 1
+      }
+    },
+    {
+      "input": {
+        "question": "Nork irabazi zuen 2020ko CCI Munduko Kopa?",
+        "context": "CCIko 2022ko gizonezkoen T20 Munduko Kopa, 2022ko urriaren 16tik azaroaren 13ra Australian ospatua, txapelketaren zortzigarren edizioa izan zen. Hasieran 2020an egitea aurreikusia zegoen, baina COVID-19aren pandemiaren ondorioz atzeratu zen. Ingalaterrak irabazi zuen, Pakistan bost wicket-eko aldearekin garaituz, eta horrela bere bigarren CCI Gizonezkoen T20 Munduko Kopa irabazi zuen.",
+        "answer": "Ingalaterra"
+      },
+      "output": {
+        "reason": "Testuingurua erabilgarria izan da 2020ko CCI Munduko Koparen egoera argitzeko eta adierazteko Ingalaterrak irabazi zuela, nahiz eta txapelketa 2022an egin zen benetan.",
+        "verdict": 1
+      }
+    },
+    {
+      "input": {
+        "question": "Zein da munduko mendi altuena?",
+        "context": "Andeak munduko mendikate kontinental luzeena dira, Hego Amerikan kokatuak. Zazpi herrialdetan zehar hedatzen dira eta mendebaldeko hemisferioko tontor altuenetako asko dituzte. Mendikatea bere ekosistema askotarikoengatik ezaguna da, hala nola goi-lautadetako Andeetako ordokia eta Amazoniako oihana.",
+        "answer": "Everest mendia."
+      },
+      "output": {
+        "reason": "Emandako testuinguruak Andeetako mendikateari buruz hitz egiten du, eta nahiz eta ikusgarria izan, ez du Everest mendiaren aipamenik egiten eta ez du harreman zuzenik munduko mendi altuenari buruzko galderarekin.",
+        "verdict": 0
+      }
+    }
+  ]
+}

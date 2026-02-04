@@ -1,0 +1,22 @@
+{
+  "ragas_version": "0.3.6",
+  "original_hash": 1150791507625365446,
+  "language": "euskara",
+  "instruction": "Given a question and an answer, analyze the complexity of each sentence in the answer. Break down each sentence into one or more fully understandable statements. Ensure that no pronouns are used in any statement. Format the outputs in JSON.",
+  "examples": [
+    {
+      "input": {
+        "question": "Nor zen Albert Einstein eta zertaz da ezagunena?",
+        "answer": "Alemaniar fisikari teorikoa izan zen, garai guztietako fisikari handien eta eraginkorrenetako bat bezala zabal ezagutua. Erlatibitatearen teorema garatzeagatik da bereziki ezaguna, eta ekarpen garrantzitsuak egin zituen mekanika kuantikoaren teoremaren garapenean ere."
+      },
+      "output": {
+        "statements": [
+          "Albert Einstein alemaniar fisikari teorikoa izan zen.",
+          "Albert Einstein garai guztietako fisikari handien eta eraginkorrenetako bat bezala ezagutzen da.",
+          "Albert Einstein erlatibitatearen teorema garatzeagatik da ezaguna.",
+          "Albert Einstein-ek ekarpen garrantzitsuak egin zituen mekanika kuantikoaren teoremaren garapenean."
+        ]
+      }
+    }
+  ]
+}

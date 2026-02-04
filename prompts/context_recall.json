@@ -1,0 +1,39 @@
+{
+  "ragas_version": "0.3.6",
+  "original_hash": 802972526470141712,
+  "language": "euskara",
+  "instruction": "Given a context, and an answer, analyze each sentence in the answer and classify if the sentence can be attributed to the given context or not. Use only 'Yes' (1) or 'No' (0) as a binary classification. Output format: {\"classifications\": [{\"statement\": <statement>, \"reason\": <explanation>, \"attributed\": <1 or 0>}, ...]}. Response only this json.",
+  "examples": [
+    {
+      "input": {
+        "question": "Zer esan diezadakezu Albert Einstein-i buruz?",
+        "context": "Albert Einstein (1879ko martxoaren 14a - 1955eko apirilaren 18a) fisikari teoriko alemaniarra izan zen, garai guztietako zientzialari garrantzitsuen eta eraginkorrenetako bat bezala jotzen dena. Bereziki erlatibitatearen teoria garatzeagatik ezaguna, ekarpen garrantzitsuak egin zituen mekanika kuantikoan ere, eta horregatik izan zen XX. mendearen lehen hamarkadetan fisika modernoak naturaren ulermenean egin zuen iraultzaren erdigunean. Erlatibitatearen teoriatik eratorritako masa-energia baliokidetasunaren bere formula, E = mc2, \"munduko ekuazio ospetsuena\" bezala izendatu da. 1921ean Fisikako Nobel Saria jaso zuen \"fisika teorikoari egindako zerbitzuengatik, eta bereziki fotoefektuaren legearen aurkikuntzagatik\", teoria kuantikoaren garapenean funtsezko urrats bat izan zena. Bere lana zientziaren filosofiaren gainean izan duen eraginagatik ere ezaguna da. 1999an britainiar *Physics World* aldizkariak mundu osoko 130 fisikari nabarmenekin egindako inkesta batean, Einstein garai guztietako fisikari onenatzat jo zen. Bere lorpen intelektualek eta jatorrizkotasunak Einstein jenioaren sinonimo bihurtu dute.",
+        "answer": "Albert Einstein, 1879ko martxoaren 14an jaioa, fisikari teoriko alemaniarra izan zen, garai guztietako zientzialari handien eta eraginkorrenetako bat bezala hartua. 1921ean Fisikako Nobel Saria jaso zuen fisika teorikoari egindako zerbitzuengatik. 1905ean lau artikulu argitaratu zituen. Einstein Suitzara joan zen 1895ean."
+      },
+      "output": {
+        "classifications": [
+          {
+            "statement": "Albert Einstein, 1879ko martxoaren 14an jaioa, fisikari teoriko alemaniarra izan zen, garai guztietako zientzialari handien eta eraginkorrenetako bat bezala hartua.",
+            "reason": "Einsteinen jaiotza-data testuinguruan argi eta garbi aipatzen da.",
+            "attributed": 1
+          },
+          {
+            "statement": "1921ean Fisikako Nobel Saria jaso zuen fisika teorikoari egindako zerbitzuengatik.",
+            "reason": "Esaldi bera testuinguruan bertan agertzen da.",
+            "attributed": 1
+          },
+          {
+            "statement": "1905ean lau artikulu argitaratu zituen.",
+            "reason": "Testuinguru honetan ez dira aipatzen berak idatzitako artikuluak.",
+            "attributed": 0
+          },
+          {
+            "statement": "Einstein Suitzara joan zen 1895ean.",
+            "reason": "Ez dago hori frogatzen duen ebidentziarik testuinguru honetan.",
+            "attributed": 0
+          }
+        ]
+      }
+    }
+  ]
+}

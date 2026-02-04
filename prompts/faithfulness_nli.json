@@ -1,0 +1,60 @@
+{
+  "ragas_version": "0.3.6",
+  "original_hash": 1416253007657698527,
+  "language": "euskara",
+  "instruction": "Your task is to judge the faithfulness of a series of statements based on a given context. For each statement you must return verdict as 1 if the statement can be directly inferred based on the context or 0 if the statement can not be directly inferred based on the context.",
+  "examples": [
+    {
+      "input": {
+        "context": "John XYZ Unibertsitateko ikaslea da. Informatikako gradua egiten ari da. Aurten hainbat ikastaroetan izena eman du, hala nola Datu Egitura, Algoritmoak eta Datu-baseen Kudeaketa. John ikasle arduratsua da eta denbora asko eskaintzen du ikasteari eta lanak burutzeari. Askotan berandu arte gelditzen da liburutegian bere proiektuetan lan egiteko.",
+        "statements": [
+          "John Biologian espezializatzen da.",
+          "John Adimen Artifizialari buruzko ikastaro bat egiten ari da.",
+          "John ikasle dedikatua da.",
+          "Johnek lanaldi partzialeko lana du."
+        ]
+      },
+      "output": {
+        "statements": [
+          {
+            "statement": "John Biologian espezializatzen da.",
+            "reason": "Johnen espezialitatea esplizituki Informatika gisa aipatzen da. Ez dago Biologian espezializatzen dela adierazten duen informaziorik.",
+            "verdict": 0
+          },
+          {
+            "statement": "John Adimen Artifizialari buruzko ikastaro bat egiten ari da.",
+            "reason": "Testuinguruak John gaur egun matrikulatuta dagoen ikastaroak aipatzen ditu, baina ez du Adimen Artifiziala aipatzen. Beraz, ezin da ondorioztatu ikastaro hori egiten ari denik.",
+            "verdict": 0
+          },
+          {
+            "statement": "John ikasle dedikatua da.",
+            "reason": "Testuinguruak dio denbora asko eskaintzen duela ikasteari eta lanak burutzeari. Gainera, askotan berandu arte gelditzen dela liburutegian bere proiektuetan lan egiteko, dedikazioa adierazten duena.",
+            "verdict": 1
+          },
+          {
+            "statement": "Johnek lanaldi partzialeko lana du.",
+            "reason": "Testuinguruan ez da aipatzen Johnek lanaldi partzialeko lanik duenik.",
+            "verdict": 0
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "context": "Fotosintesia landareek, algek eta bakterio mota batzuek erabiltzen duten prozesua da, argi-energia energia kimiko bihurtzeko.",
+        "statements": [
+          "Albert Einstein jenioa zen."
+        ]
+      },
+      "output": {
+        "statements": [
+          {
+            "statement": "Albert Einstein jenioa zen.",
+            "reason": "Testuinguruak eta adierazpenak ez dute zerikusirik elkarrekin.",
+            "verdict": 0
+          }
+        ]
+      }
+    }
+  ]
+}
