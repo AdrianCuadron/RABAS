@@ -1,0 +1,15 @@
+{
+    "faithfulness": {
+        "input": ["question", "answer", "context"],
+        "output": {"statements": ["statement", "reason", "verdict"]}
+    },
+    "answer_relevancy": {
+        
+    },
+    "context_recall": {
+        "input": ["question", "context", "answer"],
+        "output": {"classifications": ["statement", "reason", "attributed"]}
+    }
+    
+
+}
